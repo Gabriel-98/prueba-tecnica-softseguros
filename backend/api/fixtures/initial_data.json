@@ -1,0 +1,26 @@
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "name": "Mouse Bluetooth Inalámbrico Kanmabpc, Led Dual Recargable",
+            "price": 35000
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "name": "Mouse Vertical Inalámbrico Ergonómico Recargable Negro L&T Bluetooth USB",
+            "price": 36000
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "name": "Teclado Inalámbrico Bluetooth Logitech K250 Negro",
+            "price": 94500
+        }
+    }
+]

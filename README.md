@@ -12,7 +12,9 @@ Este repositorio corresponde a la **prueba técnica para Softseguros**.
 - SQLite
 
 ### Frontend
-- Aún no implementado
+- Node.js
+- React
+- TypeScript
 
 ---
 
@@ -20,6 +22,8 @@ Este repositorio corresponde a la **prueba técnica para Softseguros**.
 
 - Python 3.12.12
 - pip
+- Node.js v22
+- npm
 
 ---
 
@@ -29,13 +33,8 @@ Este repositorio corresponde a la **prueba técnica para Softseguros**.
 
 ```bash
 git clone https://github.com/Gabriel-98/prueba-tecnica-softseguros
-```
-
-```bash
 cd prueba-tecnica-softseguros/
 ```
-
----
 
 ### Ejecución del Backend
 
@@ -82,12 +81,41 @@ python api/manage.py runserver
 El backend quedará disponible en:
 
 ```
-http://127.0.0.1:8000/
+http://localhost:8000/
 ```
 
 ---
 
 ### Ejecución del frontend
 
-No definido aún.
+#### Paso 1: Acceder a la carpeta del frontend
 
+```bash
+cd frontend
+```
+
+#### Pase 2: Seleccionar la versión de Node.js
+
+Este proyecto utiliza Node.js v22:
+
+```bash
+nvm use 22
+```
+
+#### Paso 3: Instalar dependencias
+
+```bash
+npm install
+```
+
+#### Paso 4: Ejecutar la aplicación
+
+```bash
+npm run dev
+```
+
+El frontend estará disponible en:
+
+```
+http://localhost:5173/
+```

@@ -1,22 +1,26 @@
 import "./ProductList.css"
-
-const products: {id: number, name: string, price: number}[] = [
-  { id: 1, name: "Zapatos", price: 56500 },
-  { id: 2, name: "Camiseta sdfsf sdf dsf safsdafsdf safdsfsad fds dsfds fasdf dsaf ds sdfsd sdf sdaf sdf asdf sdf sdfsdfsdf dfsf", price: 78000 },
-  { id: 3, name: "Pantaloneta", price: 19800 },
-  { id: 4, name: "Zapatos", price: 56500 },
-  { id: 5, name: "Camiseta", price: 78000 },
-  { id: 6, name: "Pantaloneta", price: 19800 },
-  { id: 7, name: "Zapatos", price: 56500 },
-];
+import { useState, useEffect } from "react";
+import axios from "axios";
+import type { Product } from "../../types/product";
 
 const ProductList = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await axios.get("http://localhost:8000/products/");
+      const products: Product[] = response.data;
+      setProducts(products);
+    }
+    fetchProducts();
+  }, []);
+
   return (
     <ul className="grid grid-cols-3 gap-12">
       {products.map((product) => (
-        <li className="w-full h-135 relative bg-white rounded-lg overflow-hidden shadow-lg">
+        <li className="w-full h-135 relative bg-white rounded-lg overflow-hidden shadow-lg" key={`product-${product.id}`}>
           <div className="w-full aspect-square">
-            <img className="w-full h-full object-cover" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8ta-LgJ3RMOK_bMWgKInkR0KbNfmTZfHZOg&s"} />
+            <img className="w-full h-full object-cover" src={product.image} />
           </div>
           <div className="max-h-20 px-4 py-2">
             <span className="text-xl text-black font-semibold line-clamp-2"> {product.name} </span>

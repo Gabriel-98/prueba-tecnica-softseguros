@@ -1,0 +1,13 @@
+.cart-button-count {
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+}

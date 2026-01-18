@@ -6,5 +6,5 @@ from .models import Product
 @api_view(["GET"])
 def products(request):
     products = Product.objects.all()
-    data = list(products.values("name", "price"))
+    data = list(products.values("name", "price", "image"))
     return Response(data, status=status.HTTP_200_OK)

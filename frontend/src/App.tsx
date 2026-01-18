@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import CartButton from './components/CardButton/CartButton'
 import ProductList from './components/ProductList/ProductList';

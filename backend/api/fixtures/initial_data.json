@@ -4,7 +4,8 @@
         "pk": 1,
         "fields": {
             "name": "Mouse Bluetooth Inalámbrico Kanmabpc, Led Dual Recargable",
-            "price": 35000
+            "price": 35000,
+            "image": "http://localhost:8000/static/images/1-mouse-bluetooth-inalambrico-kanmabpc.png"
         }
     },
     {
@@ -12,7 +13,8 @@
         "pk": 2,
         "fields": {
             "name": "Mouse Vertical Inalámbrico Ergonómico Recargable Negro L&T Bluetooth USB",
-            "price": 36000
+            "price": 36000,
+            "image": "http://localhost:8000/static/images/2-mouse-vertical-inalambrico-ergonomico.png"
         }
     },
     {
@@ -20,7 +22,125 @@
         "pk": 3,
         "fields": {
             "name": "Teclado Inalámbrico Bluetooth Logitech K250 Negro",
-            "price": 94500
+            "price": 94500,
+            "image": "http://localhost:8000/static/images/3-teclado-inalambrico-logitech-k250.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "name": "Pulsera Smart Band 9 Active color negro BHR9444GL Xiaomi",
+            "price": 114999,
+            "image": "http://localhost:8000/static/images/4-pulsera-smart-band-xiaomi-9.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "name": "Smartwatch Reloj Inteligente Viva Lite Gps Integrado Caja Mocha Brown Malla Marrón",
+            "price": 299900,
+            "image": "http://localhost:8000/static/images/5-smartwatch-viva-lite.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "name": "Reloj Smartwatch Hombre Impermeable Bisel Gira Llamadas Dv09 Notificaciones Salud + Correa Cuero Y Silicona Negro",
+            "price": 189971,
+            "image": "http://localhost:8000/static/images/6-smartwatch-dv09.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "name": "Maxell Memoria Usb Flix 32gb Negro/morado 3.0 Color Violeta",
+            "price": 24605,
+            "image": "http://localhost:8000/static/images/7-memoria-usb-maxell-flix-32gb-3.0.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "name": "Memoria USB Maxell Pendrive Flix FLIX8GB 8GB 2.0 Liso verde",
+            "price": 17958,
+            "image": "http://localhost:8000/static/images/8-memoria-usb-maxell-flix-8gb-2.0.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "name": "Audifonos Maxell Tipo C Square Color Negro",
+            "price": 28710,
+            "image": "http://localhost:8000/static/images/9-audifonos-maxell-tipo-c.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "name": "Audífonos JBL Tune 770NC Cancelación de Ruido 70 Horas Batería Color Negro",
+            "price": 359900,
+            "image": "http://localhost:8000/static/images/10-audifonos-jbl-tune-770nc.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "name": "Diadema Logitech H390 USB Negro Con Micrófono",
+            "price": 108836,
+            "image": "http://localhost:8000/static/images/11-diadema-logitech-h390.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "name": "Auriculares Redmi Buds 6 Active Color Azul Xiaomi",
+            "price": 76885,
+            "image": "http://localhost:8000/static/images/12-auriculares-redmi-buds-6.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 13,
+        "fields": {
+            "name": "Jbl Endurance Zone Auriculares Deportivos Inalámbricos Negro",
+            "price": 387900,
+            "image": "http://localhost:8000/static/images/13-jbl-endurance-zone-auriculares-deportivos.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 14,
+        "fields": {
+            "name": "Auriculares Bluetooth Lenovo Thinkplus Xt83 Negro",
+            "price": 60000,
+            "image": "http://localhost:8000/static/images/14-auriculares-lenovo-thinkplus-xt83.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 15,
+        "fields": {
+            "name": "Cámara Seguridad Wifi Inalámbrica Ezviz H1c Ip 2mp 1080p Color Blanco",
+            "price": 115990,
+            "image": "http://localhost:8000/static/images/15-camara-de-seguridad-wifi-inalambrica-ezviz.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 16,
+        "fields": {
+            "name": "Cámara de seguridad Genérica IK100 WIFI con resolución Full HD 1080p visión nocturna incluida color blanco",
+            "price": 60000,
+            "image": "http://localhost:8000/static/images/16-camara-de-seguridad-generica-ik100.png"
         }
     }
 ]

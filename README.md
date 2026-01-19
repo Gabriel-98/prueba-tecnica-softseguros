@@ -36,7 +36,7 @@ git clone https://github.com/Gabriel-98/prueba-tecnica-softseguros
 cd prueba-tecnica-softseguros/
 ```
 
-### Ejecución del Backend
+### ⚙️ Ejecución del Backend
 
 #### Paso 1: Acceder a la carpeta del backend
 
@@ -72,7 +72,21 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-#### Paso 4: Ejecutar el servidor de desarrollo
+#### Pase 4: Ejecutar migraciones
+
+```bash
+python api/manage.py migrate
+```
+
+#### Paso 5: Cargar datos iniciales
+
+Se cargarán datos iniciales (productos) en la base de datos:
+
+```bash
+python api/manage.py loaddata fixtures/initial_data.json
+```
+
+#### Paso 6: Ejecutar el servidor de desarrollo
 
 ```bash
 python api/manage.py runserver
@@ -86,7 +100,7 @@ http://localhost:8000/
 
 ---
 
-### Ejecución del frontend
+### 🎨 Ejecución del frontend
 
 #### Paso 1: Acceder a la carpeta del frontend
 
@@ -119,3 +133,9 @@ El frontend estará disponible en:
 ```
 http://localhost:5173/
 ```
+
+---
+
+## 📝 Notas adicionales
+
+- Actualmente el botón de Guardar del carrito de compras no tiene funcionalidad.

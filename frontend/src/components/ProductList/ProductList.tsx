@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import type { Product } from "../../types/product";
 import { useCartStore } from "../../stores/useCartStore";
+import { replacer } from "../../utils/serialization";
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -19,15 +20,21 @@ const ProductList = () => {
   }, []);
 
   const handleAddToCart = (product: Product) => {
-    console.log("Add to cart");
-    setCart({
-      counters: (cart) ? cart.counters.set(product.id, (cart.counters.get(product.id) || 0) + 1) :
-        new Map([[product.id, 1]]),
-      purchasedProducts: (cart) ? cart.purchasedProducts.set(product.id, product) :
-        new Map([[product.id, product]]),
-      totalProducts: (cart) ? cart.totalProducts + 1 : 1,
-      totalCost: (cart) ? cart.totalCost + product.price : product.price,
-    });
+    let counters = new Map(cart?.counters);
+    let purchasedProducts = new Map(cart?.purchasedProducts);
+    
+    counters.set(product.id, (counters.get(product.id) ?? 0) + 1);
+    purchasedProducts.set(product.id, product);
+
+    const newCart = {
+      counters: counters,
+      purchasedProducts: purchasedProducts,
+      totalProducts: (cart?.totalProducts ?? 0) + 1,
+      totalCost: (cart?.totalCost ?? 0) + product.price,
+    };
+    
+    localStorage.setItem("cart", JSON.stringify(newCart, replacer));
+    setCart(newCart);
   }
 
   return (

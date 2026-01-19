@@ -1,11 +1,20 @@
 import './App.css';
 import { useState } from 'react';
+import { useEffect } from 'react';
 import CartButton from './components/CartButton/CartButton';
 import ProductList from './components/ProductList/ProductList';
 import Cart from './components/Cart/Cart';
+import { useCartStore } from './stores/useCartStore';
+import { reviver } from './utils/serialization';
 
 function App() {
   const [cartActive, setCartActive] = useState(false);
+  const setCart = useCartStore((state) => state.setCart);
+
+  useEffect(() => {
+    const newCart = JSON.parse(localStorage.getItem("cart") ?? "{}", reviver);
+    setCart(newCart);
+  }, []);
 
   return (
     <div className="w-full h-full relative">

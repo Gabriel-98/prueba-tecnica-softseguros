@@ -83,7 +83,7 @@ python api/manage.py migrate
 Se cargarán datos iniciales (productos) en la base de datos:
 
 ```bash
-python api/manage.py loaddata fixtures/initial_data.json
+python api/manage.py loaddata api/fixtures/initial_data.json
 ```
 
 #### Paso 6: Ejecutar el servidor de desarrollo
